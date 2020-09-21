@@ -13,6 +13,6 @@ json_response = json.loads(response.text.encode('utf8'))
 
 # format data
 
-response_body = json.dumps(json_response, indent = 4)
+response_body = json.dumps(json_response, indent = 2)
 
 print (response_body)

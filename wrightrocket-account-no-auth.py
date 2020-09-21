@@ -11,4 +11,4 @@ headers = {
 response = requests.request("GET", url, headers=headers, data = payload)
 
 response_body = json.loads(response.text.encode('utf8'))
-print(json.dumps(response_body, indent=4))
+print(json.dumps(response_body, indent=2))
