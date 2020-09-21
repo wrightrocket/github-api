@@ -1,4 +1,4 @@
-from pprint import pprint
+import json
 import requests
 
 url = "https://api.github.com/users/wrightrocket"
@@ -10,5 +10,5 @@ headers = {
 
 response = requests.request("GET", url, headers=headers, data = payload)
 
-# print(response.text.encode('utf8'))
-pprint(response.text)
+response_body = json.loads(response.text.encode('utf8'))
+print(json.dumps(response_body, indent=4))
